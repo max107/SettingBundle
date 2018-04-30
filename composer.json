@@ -1,0 +1,32 @@
+{
+    "name": "max107/setting-bundle",
+    "type": "bundle",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Falaleev Maxim",
+            "email": "max@studio107.ru"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Max107\\Bundle\\SettingBundle\\": "./"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Max107\\Bundle\\SettingBundle\\Tests\\": "./tests/"
+        }
+    },
+    "require": {
+        "max107/parameters": "^1.0",
+        "symfony/http-kernel": "~3.0|~4.0",
+        "symfony/dependency-injection": "~3.0|~4.0",
+        "symfony/config": "~3.0|~4.0",
+        "symfony/yaml": "~3.0|~4.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^6.5",
+        "doctrine/orm": "^2.6"
+    }
+}
