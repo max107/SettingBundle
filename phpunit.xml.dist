@@ -2,6 +2,7 @@
          bootstrap="vendor/autoload.php">
     <php>
         <ini name="error_reporting" value="32767"/>
+        <env name="KERNEL_CLASS" value="Max107\Bundle\SettingBundle\Tests\Kernel" />
     </php>
 
     <testsuites>

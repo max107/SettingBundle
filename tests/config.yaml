@@ -1,0 +1,23 @@
+parameters:
+    kernel.secret: 123
+
+framework:
+    annotations: ~
+
+doctrine:
+    dbal:
+        default_connection: default
+        connections:
+            default:
+                driver: 'pdo_sqlite'
+                memory: true
+    orm:
+        auto_generate_proxy_classes: '%kernel.debug%'
+        naming_strategy: doctrine.orm.naming_strategy.underscore
+        auto_mapping: true
+        mappings:
+            App:
+                dir: '%kernel.project_dir%/Entity'
+                type: annotation
+                prefix: 'Max107\Bundle\SettingBundle\Entity'
+                alias: App

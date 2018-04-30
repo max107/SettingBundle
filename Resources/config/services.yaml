@@ -1,6 +1,14 @@
 services:
     max107.bundle.setting_manager.setting_repository:
-        class: Max107\Bundle\SettingManager\SettingRepository
-        factory: ["@doctrine.orm.entity_manager", getRepository]
+        class: Max107\Bundle\SettingBundle\Repository\SettingRepository
+        factory: ['@doctrine.orm.entity_manager', getRepository]
+        public: true
         arguments:
-            - Max107\Bundle\SettingManager\Entity\Setting
+            - Max107\Bundle\SettingBundle\Entity\Setting
+
+    max107.bundle.setting_manager:
+        class: Max107\Bundle\SettingBundle\SettingManager\SettingManager
+        public: true
+        arguments:
+            - '@doctrine.orm.entity_manager'
+            - '@max107.bundle.setting_manager.setting_repository'

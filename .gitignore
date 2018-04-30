@@ -4,3 +4,4 @@
 /composer.lock
 /coverage
 .DS_Store
+/tests/var
