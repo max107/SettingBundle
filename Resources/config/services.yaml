@@ -12,3 +12,10 @@ services:
         arguments:
             - '@doctrine.orm.entity_manager'
             - '@max107.bundle.setting_manager.setting_repository'
+
+    max107.setting.twig.setting:
+        class: Max107\Bundle\SettingBundle\Twig\SettingExtension
+        arguments:
+            - '@max107.bundle.setting_manager'
+        tags:
+            - { name: 'twig.extension' }
